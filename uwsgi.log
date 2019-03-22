@@ -1,0 +1,68 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Mar 22 14:20:44 2019] ***
+compiled with version: 5.4.0 20160609 on 22 March 2019 02:00:21
+os: Linux-4.4.0-130-generic #156-Ubuntu SMP Thu Jun 14 08:53:28 UTC 2018
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/sjh/sqlScan/sqlScan
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+your processes number limit is 7326
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+bind(): Cannot assign requested address [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Mar 22 14:30:36 2019] ***
+compiled with version: 5.4.0 20160609 on 22 March 2019 02:00:21
+os: Linux-4.4.0-130-generic #156-Ubuntu SMP Thu Jun 14 08:53:28 UTC 2018
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/sjh/sqlScan/sqlScan
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+your processes number limit is 7326
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+bind(): Cannot assign requested address [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Mar 22 14:45:06 2019] ***
+compiled with version: 5.4.0 20160609 on 22 March 2019 02:00:21
+os: Linux-4.4.0-130-generic #156-Ubuntu SMP Thu Jun 14 08:53:28 UTC 2018
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/sjh/sqlScan/sqlScan
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+your processes number limit is 7326
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+bind(): Cannot assign requested address [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Mar 22 14:46:04 2019] ***
+compiled with version: 5.4.0 20160609 on 22 March 2019 02:00:21
+os: Linux-4.4.0-130-generic #156-Ubuntu SMP Thu Jun 14 08:53:28 UTC 2018
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/sjh/sqlScan/sqlScan
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+your processes number limit is 7326
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+bind(): Cannot assign requested address [core/socket.c line 769]
