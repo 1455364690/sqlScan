@@ -66,3 +66,287 @@ detected max file descriptor number: 1024
 lock engine: pthread robust mutexes
 thunder lock: disabled (you can enable it with --thunder-lock)
 bind(): Cannot assign requested address [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Mar 22 15:12:01 2019] ***
+compiled with version: 5.4.0 20160609 on 22 March 2019 02:00:21
+os: Linux-4.4.0-130-generic #156-Ubuntu SMP Thu Jun 14 08:53:28 UTC 2018
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/sjh/sqlScan/sqlScan
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+your processes number limit is 7326
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+bind(): Cannot assign requested address [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Mar 22 15:18:23 2019] ***
+compiled with version: 5.4.0 20160609 on 22 March 2019 02:00:21
+os: Linux-4.4.0-130-generic #156-Ubuntu SMP Thu Jun 14 08:53:28 UTC 2018
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/sjh/sqlScan/sqlScan
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+your processes number limit is 7326
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.6.7 (default, Oct 25 2018, 09:16:13)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0xb8df30
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xb8df30 pid: 17047 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 17047)
+spawned uWSGI worker 1 (pid: 17049, cores: 2)
+spawned uWSGI worker 2 (pid: 17050, cores: 2)
+spawned uWSGI worker 3 (pid: 17051, cores: 2)
+spawned uWSGI worker 4 (pid: 17052, cores: 2)
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Mar 22 15:23:55 2019] ***
+compiled with version: 5.4.0 20160609 on 22 March 2019 02:00:21
+os: Linux-4.4.0-130-generic #156-Ubuntu SMP Thu Jun 14 08:53:28 UTC 2018
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/sjh/sqlScan/sqlScan
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+your processes number limit is 7326
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:9090 fd 3
+Python version: 3.6.7 (default, Oct 25 2018, 09:16:13)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x23f7f40
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x23f7f40 pid: 17508 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 17508)
+spawned uWSGI worker 1 (pid: 17510, cores: 2)
+spawned uWSGI worker 2 (pid: 17511, cores: 2)
+spawned uWSGI worker 3 (pid: 17512, cores: 2)
+spawned uWSGI worker 4 (pid: 17513, cores: 2)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/sjh/sqlScan/sqlScan
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:8001)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Mar 22 07:37:25 2019] ***
+compiled with version: 5.4.0 20160609 on 22 March 2019 02:00:21
+os: Linux-4.4.0-130-generic #156-Ubuntu SMP Thu Jun 14 08:53:28 UTC 2018
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/sjh/sqlScan/sqlScan
+detected binary path: /usr/local/bin/uwsgi
+your processes number limit is 7326
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:9090).
+bind(): Address already in use [core/socket.c line 769]
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Mar 22 15:38:49 2019] ***
+compiled with version: 5.4.0 20160609 on 22 March 2019 02:00:21
+os: Linux-4.4.0-130-generic #156-Ubuntu SMP Thu Jun 14 08:53:28 UTC 2018
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/sjh/sqlScan/sqlScan
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+your processes number limit is 7326
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:9090 fd 3
+Python version: 3.6.7 (default, Oct 25 2018, 09:16:13)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1ea7f30
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1ea7f30 pid: 18863 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 18863)
+spawned uWSGI worker 1 (pid: 18870, cores: 2)
+spawned uWSGI worker 2 (pid: 18871, cores: 2)
+spawned uWSGI worker 3 (pid: 18872, cores: 2)
+spawned uWSGI worker 4 (pid: 18873, cores: 2)
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Mar 22 15:58:09 2019] ***
+compiled with version: 5.4.0 20160609 on 22 March 2019 02:00:21
+os: Linux-4.4.0-130-generic #156-Ubuntu SMP Thu Jun 14 08:53:28 UTC 2018
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/sjh/sqlScan/sqlScan
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+your processes number limit is 7326
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:9090).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Mar 22 15:59:30 2019] ***
+compiled with version: 5.4.0 20160609 on 22 March 2019 02:00:21
+os: Linux-4.4.0-130-generic #156-Ubuntu SMP Thu Jun 14 08:53:28 UTC 2018
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/sjh/sqlScan/sqlScan
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+your processes number limit is 7326
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+bind(): Cannot assign requested address [core/socket.c line 769]
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/sjh/sqlScan/sqlScan
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:9090)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Mar 22 08:15:57 2019] ***
+compiled with version: 5.4.0 20160609 on 22 March 2019 02:00:21
+os: Linux-4.4.0-130-generic #156-Ubuntu SMP Thu Jun 14 08:53:28 UTC 2018
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/sjh/sqlScan/sqlScan
+detected binary path: /usr/local/bin/uwsgi
+your processes number limit is 7326
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+bind(): Cannot assign requested address [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Mar 22 16:20:24 2019] ***
+compiled with version: 5.4.0 20160609 on 22 March 2019 02:00:21
+os: Linux-4.4.0-130-generic #156-Ubuntu SMP Thu Jun 14 08:53:28 UTC 2018
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/sjh/sqlScan/sqlScan
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+your processes number limit is 7326
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:9090 fd 3
+Python version: 3.6.7 (default, Oct 25 2018, 09:16:13)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1b4af40
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1b4af40 pid: 22859 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22859)
+spawned uWSGI worker 1 (pid: 22862, cores: 2)
+spawned uWSGI worker 2 (pid: 22863, cores: 2)
+spawned uWSGI worker 3 (pid: 22864, cores: 2)
+spawned uWSGI worker 4 (pid: 22865, cores: 2)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Mar 22 16:31:39 2019] ***
+compiled with version: 5.4.0 20160609 on 22 March 2019 02:00:21
+os: Linux-4.4.0-130-generic #156-Ubuntu SMP Thu Jun 14 08:53:28 UTC 2018
+nodename: VM-0-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/sjh/sqlScan/sqlScan
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /home/ubuntu/sjh/sqlScan/sqlScan/
+your processes number limit is 7326
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:9090 fd 3
+Python version: 3.6.7 (default, Oct 25 2018, 09:16:13)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1934f30
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1934f30 pid: 23835 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 23835)
+spawned uWSGI worker 1 (pid: 23842, cores: 2)
+spawned uWSGI worker 2 (pid: 23843, cores: 2)
+spawned uWSGI worker 3 (pid: 23844, cores: 2)
+spawned uWSGI worker 4 (pid: 23845, cores: 2)
+Not Found: /
+[pid: 23842|app: 0|req: 1/1] 121.225.192.248 () {42 vars in 700 bytes} [Fri Mar 22 08:34:28 2019] GET / => generated 2030 bytes in 14 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 23842|app: 0|req: 2/2] 121.225.192.248 () {42 vars in 684 bytes} [Fri Mar 22 08:34:29 2019] GET /favicon.ico => generated 2081 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 23843|app: 0|req: 1/3] 121.225.192.248 () {42 vars in 712 bytes} [Fri Mar 22 08:34:34 2019] GET /index/ => generated 582 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+Not Found: /
+[pid: 23843|app: 0|req: 2/4] 121.225.192.248 () {48 vars in 819 bytes} [Fri Mar 22 08:38:34 2019] GET / => generated 2026 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 23842|app: 0|req: 3/5] 121.225.192.248 () {42 vars in 705 bytes} [Fri Mar 22 08:38:41 2019] GET /index => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 112 bytes (1 switches on core 0)
+[pid: 23844|app: 0|req: 1/6] 121.225.192.248 () {42 vars in 707 bytes} [Fri Mar 22 08:38:41 2019] GET /index/ => generated 582 bytes in 24 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
