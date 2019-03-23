@@ -56,7 +56,7 @@ ROOT_URLCONF = 'demo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'sql-scan-web/dist')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -128,5 +128,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIR = (
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "sql-scan-web/dist/static"),
 )

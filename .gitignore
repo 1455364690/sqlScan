@@ -9,3 +9,5 @@ out
 gen
 .gitignore
 venv/Include/
+sql-scan-web/
+static/
