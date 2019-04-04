@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import json
+
 from django.shortcuts import render
 from django_web.service.test_service import *
 
@@ -8,11 +10,13 @@ from django_web.service.test_service import *
 
 def index(request):
     if request.method == "POST":
-        username = request.POST.get("username")
-        password = request.POST.get("password")
+        body = json.loads(request.body)
+        username = request.POST.get('username')
+        password = request.POST.get('password')
         save_user(username, password)
     temp = []
     for i in show_user():
         temp.append({"user": i.name, "pwd": i.password})
     return render(request, 'index.html', {"data": temp})
+
 
