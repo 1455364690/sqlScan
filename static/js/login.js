@@ -12,7 +12,7 @@ function submit() {
         data['password'] = password;
         login(JSON.stringify(data)).then(res=>{
             if (res.code === 0){
-                window.location.href="http://127.0.0.1:8000/test";
+                window.location.href="/test";
             }else{
                 toastr.error(res.message)
             }
