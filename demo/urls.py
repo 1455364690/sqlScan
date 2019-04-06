@@ -17,12 +17,16 @@ from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
 
-from django_web.views import index
-
+from django_web.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', index),
     path('', index),
-    path(r'^$', TemplateView.as_view(template_name="index.html"))
+    path(r'^$', TemplateView.as_view(template_name="index.html")),
+    path('login/', user_login),
+    path('test/', test),
+    path('list/', get_list),
+    path('reg/', reg),
+    path('upload/', upload_file_controller)
 ]

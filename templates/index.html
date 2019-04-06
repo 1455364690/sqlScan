@@ -2,28 +2,35 @@
 
 <html lang="en">
 <head>
+    <title>登录</title>
 
 </head>
 <body>
-<h1>输入</h1>
-<form action="/index/" method="post">
-    <input type="text" name="username"/>
-    <input type="password" name="password">
-    <input type="submit" value="提交">
-</form>
-<table>
-    <thead>
-        <th>用户名</th>
-        <th>密码</th>
-    </thead>
-    <tbody>
-        {% for line in data %}
-            <tr>
-                <td>{{ line.user }}</td>
-                <td>{{ line.pwd }}</td>
-            </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<link rel="stylesheet" type="text/css" href="/static/css/login.css"/>
+<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/toastr.min.css"/>
+<script type="application/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+<script type="application/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
+<script type="application/javascript" src="/static/js/toastr.min.js"></script>
+<script type="application/javascript" src="/static/js/http.js"></script>
+<script type="application/javascript" src="/static/js/login.js"></script>
+<div class="sql-scan-login-panel">
+    <div class="form-signin">
+        <h2 class="form-signin-heading">SQL智能检测系统</h2>
+        <label for="inputEmail" class="sr-only">用户名</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="请输入用户名" required="" autofocus=""
+               name="username">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="请输入密码" required="" name="password">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button id="btn-submit" class="btn btn-lg btn-primary btn-block" onclick="submit()">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+
+    </div>
+</div>
+
 </body>
 </html>

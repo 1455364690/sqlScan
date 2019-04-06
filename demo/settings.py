@@ -83,7 +83,7 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test',
+        'NAME': 'sql_scan',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',
@@ -129,9 +129,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 ORS_ORIGIN_ALLOW_ALL = True
 STATIC_URL = '/static/'
-STATICFILES_DIR = (
-    os.path.join(BASE_DIR, "/static"),
-)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (

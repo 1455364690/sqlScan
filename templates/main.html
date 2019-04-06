@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/toastr.min.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/theme.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/fileinput.css"/>
+
+<link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
+<script type="application/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+<script type="application/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
+<script type="application/javascript" src="/static/js/toastr.min.js"></script>
+<script type="application/javascript" src="/static/js/fileinput.js"></script>
+<script type="application/javascript" src="/static/js/http.js"></script>
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">SQL智能检测系统</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href=""><span class="glyphicon glyphicon-home"></span>&nbsp;主页</a></li>
+                <li class="active"><a href="../list/"><span
+                        class="glyphicon glyphicon-align-justify"></span>&nbsp;检测历史</a></li>
+
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="container theme-showcase" role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <h1>SQL智能检测系统</h1>
+        <p>本系统可根据导入的SQL文件，自动扫描并检测其中可能存在的bug，生成错误报告，提高错误检测率，减少开发成本。</p>
+    </div>
+</div>
+
+<div class="container my-4">
+    <nav id="check-btn" class="navbar navbar-default" style="display: inherit">
+        <div class="container">
+             <button type="button" class="check-btn btn btn-lg btn-default">点击按钮开始检测!!</button>
+        </div>
+      </nav>
+    <input id="input-1a"  type="file" class="file">
+</div>
+
+<script type="application/javascript" src="/static/js/main.js"></script>
+</body>
+</html>

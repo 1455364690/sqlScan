@@ -1,0 +1,29 @@
+html,body{
+	height: 100%;
+}
+body{
+    margin: 0;
+    width: 100%;
+    background: url("/static/image/bg.jpg") no-repeat center center;
+    background-size: 100% 100%;
+    padding-top: 50px;
+}
+.sql-scan-login-panel{
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+#inputPassword{
+    margin-top: 20px;
+}
+#inputEmail{
+    margin-top: 20px;
+}
+#btn-submit{
+    background-color: #101010;
+}
