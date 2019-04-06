@@ -1,3 +1,4 @@
+# _*_ coding:utf-8 _*_
 """demo URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -16,17 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
-
+from django_web.controller import task_controller
+from django_web.controller import user_controller
+from django_web.controller import file_controller
 from django_web.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', index),
     path('', index),
-    path(r'^$', TemplateView.as_view(template_name="index.html")),
-    path('login/', user_login),
+    path('login/', user_controller.user_login),
     path('test/', test),
-    path('list/', get_list),
+    path('list/', task_controller.get_task),
     path('reg/', reg),
-    path('upload/', upload_file_controller)
+    path('upload/', file_controller.upload_file)
 ]

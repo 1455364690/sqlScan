@@ -8,19 +8,12 @@ from django_web.service.md5_service import md5
 from django_web.service.check_login_service import *
 from django.contrib.auth import login
 from django_web.service import file_service
+from django_web.service import task_service
 import datetime
 
 
 # Create your views here.
 
-
-def user_login(request):
-    if request.method == 'POST':
-        body = json.loads(request.body)
-        username = body.get('username')
-        password = body.get('password')
-        res = check_login(username, password)
-        return HttpResponse(json.dumps(res), content_type='application/json')
 
 
 def test(request):
@@ -51,17 +44,3 @@ def get_list(request):
     return render(request, 'list.html')
 
 
-def upload_file_controller(request):
-    files = request.FILES
-    file = None
-    if files:
-        for i in files:
-            file = files[i]
-    data = {}
-    if file:
-        file_map = file_service.upload_file(file)
-        data = file_map
-    else:
-        data['code'] = 2
-        data['message'] = '文件上传失败'
-    return HttpResponse(json.dumps(data))

@@ -29,41 +29,44 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;主页</a></li>
-                <li class="active"><a href="#about"><span
-                        class="glyphicon glyphicon-align-justify"></span>&nbsp;检测历史</a></li>
+                <li class="active"><a href="../test/"><span class="glyphicon glyphicon-home"></span>&nbsp;主页</a></li>
+                <li class="active"><a href=""><span
+                        class="glyphicon glyphicon-align-justify"></span>&nbsp;检测列表</a></li>
 
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
 
+{#{% if menu %}#}
+{#    <ul>#}
+{#        {% for line in menu %}#}
+{#            <li>{{ line }}</li>#}
+{#            <li>{{ line.value }}</li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{#{% endif %}#}
+
+
 <div class="container theme-showcase" role="main">
     <table class="table table-striped">
         <caption>SQL检测列表</caption>
         <thead>
         <tr>
-            <th>编号</th>
-            <th>城市</th>
-            <th>邮编</th>
+            {% for i in menu %}
+                <td>{{ i }}</td>
+            {% endfor %}
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>Tanmay</td>
-            <td>Bangalore</td>
-            <td>560001</td>
-        </tr>
-        <tr>
-            <td>Sachin</td>
-            <td>Mumbai</td>
-            <td>400003</td>
-        </tr>
-        <tr>
-            <td>Uma</td>
-            <td>Pune</td>
-            <td>411027</td>
-        </tr>
+        {% for line in task_list %}
+            <tr>
+            <td>{{ line.id }}</td>
+            <td>{{ line.file_name }}</td>
+            <td>{{ line.create_time }}</td>
+            <td>{{ line.state }}</td>
+            </tr>
+        {% endfor %}
         </tbody>
     </table>
 </div>
