@@ -2,7 +2,7 @@ var show = true
 $("#input-1a").fileinput({
     language: 'zh', //设置语言
 
-    uploadUrl: "http://127.0.0.1:8000/upload/", //上传的地址
+    uploadUrl: "/upload/", //上传的地址
     uploadExtraData: {"id": 1, "fileName": 'check.sql'},
     showRemove: false, //显示移除按钮
     showPreview: show

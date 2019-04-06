@@ -1,7 +1,7 @@
 
 
 function login(data) {
-    var url = 'http://127.0.0.1:8000/login/';
+    var url = '/login/';
     return post(url, data);
 }
 function submit() {
