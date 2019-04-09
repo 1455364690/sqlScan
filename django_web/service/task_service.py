@@ -15,9 +15,8 @@ def get_task_by_user_id(user_id):
 
 
 def get_task_by_task_id(task_id):
-    return task.objects.filter(id=task_id)
+    return task.objects.filter(id=task_id).values()
 
 
 def start_task():
     pass
-

@@ -9,13 +9,14 @@
 <link rel="stylesheet" type="text/css" href="/static/css/toastr.min.css"/>
 <link rel="stylesheet" type="text/css" href="/static/css/fileinput.css"/>
 <link rel="stylesheet" type="text/css" href="/static/css/theme.css"/>
-<link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/report.css"/>
 <script type="application/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+
 <script type="application/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
 <script type="application/javascript" src="/static/js/toastr.min.js"></script>
 <script type="application/javascript" src="/static/js/fileinput.js"></script>
 <script type="application/javascript" src="/static/js/http.js"></script>
-<script type="application/javascript" src="/static/js/main.js"></script>
+<script type="application/javascript" src="/static/js/echarts.js"></script>
 <nav class="navbar navbar-inverse">
     <div class="container">
         <div class="navbar-header">
@@ -31,11 +32,124 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;主页</a></li>
                 <li class="active"><span
-                        class="glyphicon glyphicon-list-alt"></span>&nbsp;检测报告</li>
+                        class="glyphicon glyphicon-list-alt"></span>&nbsp;检测报告
+                </li>
 
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
+<div class="container my-4">
+    <div class="panel panel-info">
+        <div class="panel-heading my-panel">
+            <h3 class="panel-title">基本信息</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">检测文件名称</h3>
+                        </div>
+                        <div class="panel-body">
+                            WannaCry
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">检测时长</h3>
+                        </div>
+                        <div class="panel-body">
+                            5 min
+                        </div>
+                    </div>
+                </div><!-- /.col-sm-4 -->
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">提测用户</h3>
+                        </div>
+                        <div class="panel-body">
+                            巴拉巴拉
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">其他信息</h3>
+                        </div>
+                        <div class="panel-body">
+                            无
+                        </div>
+                    </div>
+                </div><!-- /.col-sm-4 -->
+
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">提测时间</h3>
+                        </div>
+                        <div class="panel-body">
+                            2019-09-09 09:09:09
+                        </div>
+                    </div>
+
+                </div><!-- /.col-sm-4 -->
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading my-panel">
+            <h3 class="panel-title">统计信息</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-6">
+                <div id="pie" style="width: 500px;height: 500px"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="pie2" style="width: 500px;height: 500px"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading my-panel">
+            <h3 class="panel-title">详细信息</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped" style="text-align: center">
+                <caption>SQL检测列表</caption>
+                <thead>
+                <tr>
+                    <td>test1</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
 </body>
+<script type="application/javascript" src="/static/js/report.js"></script>
+
 </html>

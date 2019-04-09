@@ -1,0 +1,8 @@
+.panel-info .my-panel{
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    border-color: rgba(0,0,0,0.8);
+}
+.panel-info{
+    border-color: rgba(0,0,0,0.8);
+}

@@ -3,12 +3,12 @@ $("#input-1a").fileinput({
     language: 'zh', //设置语言
 
     uploadUrl: "/upload/", //上传的地址
-    uploadExtraData: {"id": 1, "fileName": 'check.sql'},
+    allowedFileExtensions: ['sql'],
     showRemove: false, //显示移除按钮
     showPreview: show
     //uploadExtraData:{"id": 1, "fileName":'123.mp3'},
 }).on("fileuploaded", function (event, data, msg) {
-    document.getElementById("check-btn").style.display="inherit"
+    console.log(data)
 }).on("fileerror", function (event, data, msg) {
     console.log(data);
 });
