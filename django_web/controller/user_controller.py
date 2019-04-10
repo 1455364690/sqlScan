@@ -14,3 +14,7 @@ def user_login(request):
         password = body.get('password')
         res = user_service.user_login(request, username, password)
         return HttpResponse(json.dumps(res), content_type='application/json')
+
+
+def user_logout():
+    return
