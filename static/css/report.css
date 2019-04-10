@@ -6,3 +6,15 @@
 .panel-info{
     border-color: rgba(0,0,0,0.8);
 }
+.my-high-danger{
+    color: #a94442;
+}
+.my-mid-danger{
+    color: #8a6d3b;
+}
+.my-low-danger{
+    color: #3c763d;
+}
+.my-extra{
+    color: #31708f;
+}

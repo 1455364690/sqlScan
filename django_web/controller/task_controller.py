@@ -30,5 +30,7 @@ def start_task(request):
         package = {'name': temp_task['file_name'], 'tables': tables}
         # 协同过滤
         errors = collaborative_filtering_service.start(package)
+        # 保存错误到数据库中
+        collaborative_filtering_service.save_errors(id, errors)
         res = {'code': 0, 'message': '运行成功', 'data': errors}
         return HttpResponse(json.dumps(res))

@@ -30,7 +30,7 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;主页</a></li>
+                <li class="active"><a href="../../test/"><span class="glyphicon glyphicon-home"></span>&nbsp;主页</a></li>
                 <li class="active"><span
                         class="glyphicon glyphicon-list-alt"></span>&nbsp;检测报告
                 </li>
@@ -52,7 +52,7 @@
                             <h3 class="panel-title">检测文件名称</h3>
                         </div>
                         <div class="panel-body">
-                            WannaCry
+                            {{ info.file_name }}
                         </div>
                     </div>
                     <div class="panel panel-default">
@@ -60,7 +60,7 @@
                             <h3 class="panel-title">检测时长</h3>
                         </div>
                         <div class="panel-body">
-                            5 min
+                            {{ info.last_time }}
                         </div>
                     </div>
                 </div><!-- /.col-sm-4 -->
@@ -70,7 +70,7 @@
                             <h3 class="panel-title">提测用户</h3>
                         </div>
                         <div class="panel-body">
-                            巴拉巴拉
+                            {{ info.user_name }}
                         </div>
                     </div>
                     <div class="panel panel-default">
@@ -89,7 +89,7 @@
                             <h3 class="panel-title">提测时间</h3>
                         </div>
                         <div class="panel-body">
-                            2019-09-09 09:09:09
+                            {{ info.time }}
                         </div>
                     </div>
 
@@ -117,31 +117,47 @@
         </div>
         <div class="panel-body">
             <table class="table table-striped" style="text-align: center">
-                <caption>SQL检测列表</caption>
+                <caption>SQL错误列表</caption>
                 <thead>
                 <tr>
-                    <td>test1</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
+                    {% for i in menu %}
+                        <td>{{ i }}</td>
+                    {% endfor %}
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                </tr>
+                {% for line in list %}
+                    <tr>
+                        <td>{{ line.id }}</td>
+                        <td>{{ line.table_name }}</td>
+                        <td>{{ line.user_name }}</td>
+                        <td>{{ line.file_name }}</td>
+                        <td>{{ line.mistake_type }}</td>
+                        <td>
+                            {% ifequal line.mistake_grade '高危' %}
+                                <span class="my-high-danger">{{ line.mistake_grade }}</span>
+                            {% else %}
+                                {% ifequal line.mistake_grade '中危' %}
+                                    <span class="my-mid-danger">{{ line.mistake_grade }}</span>
+                                {% else %}
+                                    {% ifequal line.mistake_grade '低危' %}
+                                        <span class="my-low-danger">{{ line.mistake_grade }}</span>
+                                    {% else %}
+                                        {% ifequal line.mistake_grade '多余' %}
+                                            <span class="my-extra">{{ line.mistake_grade }}</span>
+                                        {% else %}
+                                            {{ line.mistake_grade }}
+                                        {% endifequal %}
+                                    {% endifequal %}
+                                {% endifequal %}
+                            {% endifequal %}
+
+
+                        </td>
+                        <td>{{ line.time }}</td>
+                        <td>{{ line.other }}</td>
+                    </tr>
+                {% endfor %}
                 </tbody>
             </table>
         </div>

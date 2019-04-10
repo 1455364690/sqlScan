@@ -105,11 +105,11 @@ option2 = {
             radius : '55%',
             center: ['50%', '60%'],
             data:[
-                {value:335, name:'高危'},
-                {value:310, name:'中危'},
-                {value:234, name:'低危'},
-                {value:135, name:'普通'},
-                {value:1548, name:'多余'}
+                {value:5, name:'高危'},
+                {value:4, name:'中危'},
+                {value:3, name:'低危'},
+                {value:2, name:'普通'},
+                {value:1, name:'多余'}
             ]
         }
     ],
