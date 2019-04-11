@@ -9,13 +9,14 @@
 <link rel="stylesheet" type="text/css" href="/static/css/toastr.min.css"/>
 <link rel="stylesheet" type="text/css" href="/static/css/fileinput.css"/>
 <link rel="stylesheet" type="text/css" href="/static/css/theme.css"/>
-<link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/report.css"/>
 <script type="application/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+
 <script type="application/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
 <script type="application/javascript" src="/static/js/toastr.min.js"></script>
 <script type="application/javascript" src="/static/js/fileinput.js"></script>
 <script type="application/javascript" src="/static/js/http.js"></script>
-<script type="application/javascript" src="/static/js/main.js"></script>
+<script type="application/javascript" src="/static/js/echarts.js"></script>
 <nav class="navbar navbar-inverse">
     <div class="container">
         <div class="navbar-header">
@@ -29,13 +30,142 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;主页</a></li>
+                <li class="active"><a href="../../test/"><span class="glyphicon glyphicon-home"></span>&nbsp;主页</a></li>
                 <li class="active"><span
-                        class="glyphicon glyphicon-list-alt"></span>&nbsp;检测报告</li>
+                        class="glyphicon glyphicon-list-alt"></span>&nbsp;检测报告
+                </li>
 
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
+<div class="container my-4">
+    <div class="panel panel-info">
+        <div class="panel-heading my-panel">
+            <h3 class="panel-title">基本信息</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">检测文件名称</h3>
+                        </div>
+                        <div class="panel-body">
+                            {{ info.file_name }}
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">检测时长</h3>
+                        </div>
+                        <div class="panel-body">
+                            {{ info.last_time }}
+                        </div>
+                    </div>
+                </div><!-- /.col-sm-4 -->
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">提测用户</h3>
+                        </div>
+                        <div class="panel-body">
+                            {{ info.user_name }}
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">其他信息</h3>
+                        </div>
+                        <div class="panel-body">
+                            无
+                        </div>
+                    </div>
+                </div><!-- /.col-sm-4 -->
+
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">提测时间</h3>
+                        </div>
+                        <div class="panel-body">
+                            {{ info.time }}
+                        </div>
+                    </div>
+
+                </div><!-- /.col-sm-4 -->
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading my-panel">
+            <h3 class="panel-title">统计信息</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-6">
+                <div id="pie" style="width: 500px;height: 500px"></div>
+            </div>
+            <div class="col-md-6">
+                <div id="pie2" style="width: 500px;height: 500px"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading my-panel">
+            <h3 class="panel-title">详细信息</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped" style="text-align: center">
+                <caption>SQL错误列表</caption>
+                <thead>
+                <tr>
+                    {% for i in menu %}
+                        <td>{{ i }}</td>
+                    {% endfor %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for line in list %}
+                    <tr>
+                        <td>{{ line.id }}</td>
+                        <td>{{ line.table_name }}</td>
+                        <td>{{ line.user_name }}</td>
+                        <td>{{ line.file_name }}</td>
+                        <td>{{ line.mistake_type }}</td>
+                        <td>
+                            {% ifequal line.mistake_grade '高危' %}
+                                <span class="my-high-danger">{{ line.mistake_grade }}</span>
+                            {% else %}
+                                {% ifequal line.mistake_grade '中危' %}
+                                    <span class="my-mid-danger">{{ line.mistake_grade }}</span>
+                                {% else %}
+                                    {% ifequal line.mistake_grade '低危' %}
+                                        <span class="my-low-danger">{{ line.mistake_grade }}</span>
+                                    {% else %}
+                                        {% ifequal line.mistake_grade '多余' %}
+                                            <span class="my-extra">{{ line.mistake_grade }}</span>
+                                        {% else %}
+                                            {{ line.mistake_grade }}
+                                        {% endifequal %}
+                                    {% endifequal %}
+                                {% endifequal %}
+                            {% endifequal %}
+
+
+                        </td>
+                        <td>{{ line.time }}</td>
+                        <td>{{ line.other }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
 </body>
+<script type="application/javascript" src="/static/js/report.js"></script>
+
 </html>

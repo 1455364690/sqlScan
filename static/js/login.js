@@ -11,6 +11,7 @@ function submit() {
         data['username'] = username;
         data['password'] = password;
         login(JSON.stringify(data)).then(res=>{
+            console.log(res)
             if (res.code === 0){
                 window.location.href="/test";
             }else{

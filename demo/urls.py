@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import re_path
 from django.views.generic import TemplateView
 from django_web.controller import task_controller
 from django_web.controller import user_controller
 from django_web.controller import file_controller
+from django_web.controller import report_controller
 from django_web.views import *
 
 urlpatterns = [
@@ -30,5 +32,7 @@ urlpatterns = [
     path('test/', test),
     path('list/', task_controller.get_task),
     path('reg/', reg),
-    path('upload/', file_controller.upload_file)
+    path('upload/', file_controller.upload_file),
+    path('startScan/', task_controller.start_task),
+    re_path('^report/(\d+)/', report_controller.get_report),
 ]
