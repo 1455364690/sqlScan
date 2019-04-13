@@ -9,6 +9,8 @@ class user(models.Model):
     password = models.CharField(max_length=100)
     create_time = models.CharField(max_length=100)
     modify_time = models.CharField(max_length=100)
+    user_state = models.IntegerField()
+    user_role = models.IntegerField()
 
 
 class task(models.Model):

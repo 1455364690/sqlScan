@@ -163,15 +163,28 @@ def getConfidence():
     pass
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
+#     data = loadDataSet()
+#     for i in range(len(data)):
+#         for j in range(len(data[i])):
+#             data[i][j] = str(data[i][j])
+#     L, supportData = apriori(data, 0.5)
+#
+#     rules = generateRules(L, supportData, minConf=0.3)
+#
+#     print('频繁项集: {}'.format(L))
+#     print('所有候选项集的支持度信息: {}'.format(supportData))
+#     print('rules: {}'.format(rules))
+
+
+def start():
     data = loadDataSet()
     for i in range(len(data)):
         for j in range(len(data[i])):
             data[i][j] = str(data[i][j])
     L, supportData = apriori(data, 0.5)
-
     rules = generateRules(L, supportData, minConf=0.3)
-
-    print('频繁项集: {}'.format(L))
-    print('所有候选项集的支持度信息: {}'.format(supportData))
-    print('rules: {}'.format(rules))
+    return rules
+    # print('频繁项集: {}'.format(L))
+    # print('所有候选项集的支持度信息: {}'.format(supportData))
+    # print('rules: {}'.format(rules))

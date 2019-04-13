@@ -22,16 +22,21 @@ from django_web.controller import task_controller
 from django_web.controller import user_controller
 from django_web.controller import file_controller
 from django_web.controller import report_controller
-from django_web.views import *
+from django_web import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('index/', index),
-    path('', index),
+    # path('admin/', admin.site.urls),
+    path('admin/', user_controller.admin_user),
+    path('index/', views.index),
+    path('', views.index),
     path('login/', user_controller.user_login),
-    path('test/', test),
+    path('logout/', user_controller.user_logout),
+    path('reactUser/', user_controller.react_user),
+    path('freezeUser/', user_controller.freeze_user),
+    path('test/', views.test),
     path('list/', task_controller.get_task),
-    path('reg/', reg),
+    path('regView/', views.regView),
+    path('reg/', user_controller.user_reg),
     path('upload/', file_controller.upload_file),
     path('startScan/', task_controller.start_task),
     re_path('^report/(\d+)/', report_controller.get_report),

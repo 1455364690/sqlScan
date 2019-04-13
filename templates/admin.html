@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>检测列表</title>
+    <title>管理用户</title>
 </head>
 <body>
 <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.css"/>
@@ -28,15 +28,12 @@
             <a class="navbar-brand" href="#">SQL智能检测系统</a>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="../test/"><span class="glyphicon glyphicon-home"></span>&nbsp;主页</a></li>
-                <li class="active"><a href=""><span
-                        class="glyphicon glyphicon-align-justify"></span>&nbsp;检测列表</a></li>
-
-            </ul>
             <div style="float: right;">
                 <button type="button" class="btn btn-lg btn-link" onclick="logout()">登出</button>
             </div>
+            <ul class="nav navbar-nav">
+
+            </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
@@ -53,7 +50,7 @@
 
 <div class="container theme-showcase" role="main">
     <table class="table table-striped" style="text-align: center">
-        <caption>SQL检测列表</caption>
+        <caption>用户列表</caption>
         <thead>
         <tr>
             {% for i in menu %}
@@ -62,32 +59,28 @@
         </tr>
         </thead>
         <tbody>
-        {% for line in task_list %}
+        {% for line in users %}
             <tr>
                 <td>{{ line.id }}</td>
-                <td>{{ line.file_name }}</td>
+                <td>{{ line.user_id }}</td>
+                <td>{{ line.username }}</td>
                 <td>{{ line.create_time }}</td>
                 <td>
-                    {% ifequal line.state -1 %}
-                        测试
+                    {% ifequal line.state 0 %}
+                        <span>已被冻结</span>
                     {% else %}
-                        {% ifequal line.state 0 %}
-                            未测试
-                            {% else %}
-                            测试成功
-                        {% endifequal %}
+                        <span>已被激活</span>
                     {% endifequal %}
 
                 </td>
                 <td>
-                    {% ifequal line.state -1 %}
-                        <button type="button" class="btn btn-sm btn-warning" onclick="restart({{ line.id }})">重新测试</button>
+                    {% ifequal line.state 0 %}
+                        <button type="button" class="btn btn-sm btn-info" onclick="react({{ line.user_id }})">激活
+                        </button>
                     {% else %}
-                        {% ifequal line.state 0 %}
-                            <button type="button" class="btn btn-sm btn-success" onclick="start({{ line.id }})">开始测试</button>
-                            {% else %}
-                            <button type="button" class="btn btn-sm btn-info" onclick="report({{ line.id }})">查看报告</button>
-                        {% endifequal %}
+                        <button type="button" class="btn btn-sm btn-warning" onclick="freeze({{ line.user_id }})">冻结
+                        </button>
+
                     {% endifequal %}
                 </td>
             </tr>
@@ -97,5 +90,5 @@
 </div>
 </body>
 <script type="application/javascript" src="/static/js/util.js"></script>
-<script src="/static/js/list.js"></script>
+<script src="/static/js/admin.js"></script>
 </html>

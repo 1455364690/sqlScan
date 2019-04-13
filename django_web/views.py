@@ -23,20 +23,11 @@ def test(request):
     return render(request, 'main.html')
 
 
-def reg(request):
-    if request.method == "POST":
-        body = json.loads(request.body)
-        username = body.get('username')
-        password = body.get('password')
-        password = md5(password)
-        now_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        temp = user(name=username, password=password, create_time=now_time, modify_time=now_time)
-        temp.save()
-        # save_user(username, password)
-    temp = []
-    # for i in show_user():
-    #     temp.append({"user": i.name, "pwd": i.password})
-    return render(request, 'index.html', {"data": temp})
+def regView(request):
+    return render(request, 'reg.html')
+
+
+
 
 
 def index(request):

@@ -20,7 +20,7 @@ def upload_file(request):
         file_map = file_service.upload_file(file)
         data = file_map
         user_id = user_service.get_user_by_name(request.user)[0]['id']
-        print(task_service.create_task(user_id, file_map['file_name']))
+        task_service.create_task(user_id, file_map['file_name'])
     else:
         data['code'] = 2
         data['message'] = '文件上传失败'
