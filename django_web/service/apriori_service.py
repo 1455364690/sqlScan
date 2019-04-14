@@ -1,6 +1,7 @@
 # _*_ coding:utf-8 _*_
 
 from django_web.service import file_service
+from django_web import models
 
 
 def get_dataset():
@@ -81,6 +82,12 @@ def get_ck(lk, k):
 
 
 def apriori(data_list, min_support=0.5):
+    """
+    计算频繁项集和支持度表
+    :param data_list:
+    :param min_support:
+    :return:
+    """
     # 构建初始候选项集C1；C1:{fset({1}),fset({2}),fset({3}),fset({4})...}
     C1 = init(data_list)
     # 将dataSet集合化，以满足scanD的格式要求D:{{'3','4','1'},{'5','3','2'}...}
@@ -119,12 +126,6 @@ def cal_confidence(freqSet, H, supportData, brl, minConf=0.7):
     """
     prunedH = []
     for conseq in H:
-        # print('fre', freqSet)
-        # print('con', conseq)
-        # print('sup', supportData)
-        # a = supportData[freqSet]
-        # print(supportData[freqSet], freqSet)
-        # b = supportData[freqSet - conseq]
         key = list(freqSet - conseq)
         # sorted(key)
         rKey = None
@@ -184,23 +185,60 @@ def get_confidence(freq_sets, support_data, min_confidence=0.7):
     return confidence_list
 
 
-def start():
+def start_apriori():
+    """
+    Apriori方法计算求置信度
+    :return:
+    """
     data = get_dataset()
-    # for i in range(len(data)):
-    #     for j in range(len(data[i])):
-    #         data[i][j] = str(data[i][j])
     # 获取频繁项集和支持度集
     freq_sets, support_data = apriori(data, 0.5)
     # 计算置信度
-    confidence = get_confidence(freq_sets, support_data, min_confidence=0.3)
-    for i in confidence:
-        print(i)
-        for j in i:
-            print(j)
-    # print(confidence)
-    return confidence
-    # print('频繁项集: {}'.format(L))
-    # print('所有候选项集的支持度信息: {}'.format(supportData))
-    # print('rules: {}'.format(rules))
+    confidences = get_confidence(freq_sets, support_data, min_confidence=0.3)
+    # 清除数据库中原有置信度关系
+    clear_confidence_rule()
+    for confidence in confidences:
+        frozen_rule_a = confidence[0]
+        frozen_rule_b = confidence[1]
+        confi_num = confidence[2]
+        list_rule_a = []
+        list_rule_b = []
+        for i in frozen_rule_a:
+            list_rule_a.append(i)
+        for i in frozen_rule_b:
+            list_rule_b.append(i)
+        add_confidence_rule(list_rule_a, list_rule_b, confi_num)
+    return confidences
 
+
+def clear_confidence_rule():
+    """
+    删除数据库中所有的置信度关系
+    :return:
+    """
+    try:
+        models.confidence_rule.objects.all().delete()
+        return True
+    except Exception as e:
+        print(e)
+        return False
+
+
+def add_confidence_rule(list_rule_a, list_rule_b, confi_num):
+    """
+    将置信度关系保存到数据库中
+    :param list_rule_a:
+    :param list_rule_b:
+    :param confi_num:
+    :return:
+    """
+    models.confidence_rule.objects.create(rule_a=list_rule_a, rule_b=list_rule_b, confidence=confi_num)
+
+
+def get_rules():
+    """
+    从数据库中读取所有置信度关系
+    :return:
+    """
+    return models.confidence_rule.objects.all().values()
 # start()

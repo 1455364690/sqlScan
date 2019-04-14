@@ -9,6 +9,11 @@ file_dir = 'static/file/'
 
 
 def upload_file(file):
+    """
+    上传文件
+    :param file:
+    :return:
+    """
     res_map = {}
     file_name = str(datetime.datetime.now().strftime('_%Y_%m_%d_%H_%M_%S_')) + file.name
     try:
@@ -27,6 +32,12 @@ def upload_file(file):
 
 
 def read_file(file_name, file_path=file_dir):
+    """
+    读取文件
+    :param file_name:
+    :param file_path:
+    :return:
+    """
     data = {}
     tmp_str = ''
     try:
@@ -63,6 +74,11 @@ def delete_file(file):
 
 
 def get_tables(sql_str):
+    """
+    从SQL语句中找出所有表名
+    :param sql_str:
+    :return:
+    """
     res = re.findall(r"insert into (.+?) ", sql_str, re.S)
     if res is None or len(res) == 0:
         res = re.findall(r"INSERT INTO (.+?) ", sql_str, re.S)
@@ -74,6 +90,10 @@ def get_tables(sql_str):
 
 
 def get_history_tables():
+    """
+    从历史套餐中获取数据库表名
+    :return:
+    """
     path = os.path.join(STATICFILES_DIRS[0], 'file', 'history_tables/')
     file_names = os.listdir(path)
     res = {}
@@ -140,13 +160,7 @@ def get_insert_sql_info_by_attribute(insert_sql, attribute):
     for i in dictionary:
         if i == attribute:
             return dictionary[i]
-    # print(dictionary)
     return None
-    # for i in dictionary.items():
-    #     print(i)
-    # print(dictionary)
-    # print(attrs)
-    # print(values)
 
 
 def get_values_by_table_and_attribute_key(table_name, attribute_key):
@@ -183,14 +197,3 @@ def get_values_by_table_and_attribute_key(table_name, attribute_key):
                 value_list.append(get_insert_sql_info_by_attribute(i, attribute_key))
         value_lists.append(value_list)
     return value_lists
-    # print(value_lists)
-    # print(len(value_lists))
-    # print(len(value_lists[0]))
-    # for i in value_lists:
-    #     for j in value_lists[i]:
-    #         print(j)
-    #     print(len(value_lists[i]))
-    #     print(i)
-    #     breaks
-
-    pass

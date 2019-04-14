@@ -2,45 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d5df206-3a31-42b8-bbe3-7665eed265a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_web/controller/user_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_web/controller/user_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_web/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_web/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/django_web/service/apriori_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_web/service/apriori_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_web/service/file_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_web/service/file_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_web/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/10.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/10.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/100.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/11.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/11.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/12.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/12.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/13.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/13.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/14.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/14.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/15.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/15.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/16.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/16.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/17.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/17.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/18.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/18.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/19.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/19.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/2.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/20.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/21.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/22.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/23.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/24.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/25.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/26.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/27.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/28.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/29.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/3.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/3.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/30.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/4.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/4.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/5.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/5.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/6.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/6.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/7.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/7.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/8.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/8.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/9.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/9.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,19 +56,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django_web/service/apriori_service.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="196" column="16" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django_web/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="137">
+              <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -122,12 +77,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/django_web/service/task_service.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-71">
+              <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="58" />
+              <folding>
+                <element signature="e#23#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django_web/service/file_service.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="15" selection-start-column="15" selection-end-column="15" />
+            <state relative-caret-position="141">
+              <caret line="198" column="22" selection-start-line="198" selection-start-column="22" selection-end-line="198" selection-end-column="22" />
               <folding>
                 <element signature="e#24#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/django_web/service/apriori_service.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="e#24#67#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -210,9 +189,9 @@
         <option value="$PROJECT_DIR$/templates/list.html" />
         <option value="$PROJECT_DIR$/django_web/views.py" />
         <option value="$PROJECT_DIR$/django_web/controller/user_controller.py" />
-        <option value="$PROJECT_DIR$/django_web/service/file_service.py" />
-        <option value="$PROJECT_DIR$/django_web/service/apriori_service.py" />
         <option value="$PROJECT_DIR$/django_web/models.py" />
+        <option value="$PROJECT_DIR$/django_web/service/apriori_service.py" />
+        <option value="$PROJECT_DIR$/django_web/service/file_service.py" />
       </list>
     </option>
   </component>
@@ -241,6 +220,24 @@
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="django_web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="django_web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="django_web" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="django_web" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -473,23 +470,23 @@
       <workItem from="1555049676293" duration="4556000" />
       <workItem from="1555130546256" duration="25831000" />
       <workItem from="1555170630788" duration="2781000" />
-      <workItem from="1555223697109" duration="16175000" />
+      <workItem from="1555223697109" duration="18759000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227900000" />
+    <option name="totallyTimeSpent" value="230484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24413905" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24413905" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4987874" visible="true" weight="0.46268657" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4987874" visible="true" weight="0.46268657" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4987874" weight="0.5588723" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -734,26 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_web/service/task_service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="58" />
-          <folding>
-            <element signature="e#23#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_web/controller/task_controller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="55" />
-          <folding>
-            <element signature="e#23#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/http.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -871,12 +848,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_web/service/file_service.py">
+    <entry file="file://$PROJECT_DIR$/django_web/controller/task_controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        <state relative-caret-position="309">
+          <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="55" />
           <folding>
-            <element signature="e#24#39#0" expanded="true" />
+            <element signature="e#23#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -891,17 +868,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_web/service/apriori_service.py">
+    <entry file="file://$PROJECT_DIR$/django_web/service/task_service.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="196" column="16" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
+        <state relative-caret-position="-71">
+          <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="58" />
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/django_web/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="137">
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_web/service/apriori_service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#24#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_web/service/file_service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="198" column="22" selection-start-line="198" selection-start-column="22" selection-end-line="198" selection-end-column="22" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
