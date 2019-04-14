@@ -6,9 +6,8 @@ function start(id) {
     var data = {};
     data["id"] = id;
     post("/startScan/",JSON.stringify(data)).then(res =>{
-        console.log(res)
+        window.location.reload();
     })
-    console.log("开始测试"+id)
 }
 
 function report(id) {

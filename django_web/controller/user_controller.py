@@ -5,11 +5,13 @@ import json
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render
+from django_web.service import apriori_service
 
 from django_web.service import user_service
 
 
 def user_login(request):
+    apriori_service.start()
     if request.method == 'POST':
         body = json.loads(request.body)
         username = body.get('username')

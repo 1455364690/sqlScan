@@ -27,9 +27,6 @@ def regView(request):
     return render(request, 'reg.html')
 
 
-
-
-
 def index(request):
     return render(request, 'index.html')
 
