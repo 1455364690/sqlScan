@@ -30,11 +30,11 @@ def get_error_tables(new_tables, tables_times):
         data = {'sim': tables_in_his[i], 'table_name': i}
         if tables_in_his[i] >= 9:
             data['message'] = '高危'
-        elif tables_in_his[i] >= 7:
+        elif tables_in_his[i] >= 6:
             data['message'] = '中危'
-        elif tables_in_his[i] >= 5:
+        elif tables_in_his[i] >= 3:
             data['message'] = '低危'
-        elif tables_in_his[i] <= 2:
+        elif tables_in_his[i] == 0:
             data['message'] = '多余'
         else:
             data['message'] = '普通'

@@ -2,57 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d5df206-3a31-42b8-bbe3-7665eed265a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_web/controller/report_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_web/controller/report_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_web/controller/task_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_web/controller/task_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_web/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_web/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_web/service/apriori_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_web/service/apriori_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_web/service/file_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_web/service/file_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_web/service/task_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_web/service/task_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_web/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/19 - 副本.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_06_10_07_01_123.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_06_10_09_13_123.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_06_10_11_56_-146bf9e848270f36.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_06_15_57_12_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_06_16_00_09_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_06_16_01_36_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_06_16_02_29_123.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_06_16_08_35_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_06_16_12_54_123.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_06_16_14_10_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_06_17_52_03_123.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_06_18_04_09_a.pos" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_08_19_25_44_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_08_19_27_49_kivul.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_08_19_57_18_138insert.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_10_10_04_40_kivul.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_10_14_54_05_kivul.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_10_16_42_04_kivul.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/_2019_04_14_21_14_10_kivul.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/0.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/0.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/10.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/10.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/11.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/11.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/12.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/12.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/13.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/13.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/14.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/14.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/15.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/15.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/16.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/16.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/17.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/17.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/18.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/18.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/19.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/19.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/2.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/3.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/3.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/4.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/4.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/5.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/5.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/6.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/6.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/7.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/7.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/8.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/8.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file/history_tables/9.sql" beforeDir="false" afterPath="$PROJECT_DIR$/static/file/history_tables/9.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_web/service/collaborative_filtering_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_web/service/collaborative_filtering_service.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,10 +67,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_web/service/task_service.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="64" column="23" lean-forward="true" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
+            <state relative-caret-position="117">
+              <caret line="55" column="53" lean-forward="true" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
               <folding>
                 <element signature="e#23#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/django_web/service/collaborative_filtering_service.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+              <folding>
+                <element signature="e#15#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_web/service/apriori_service.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-326">
-              <caret line="276" column="41" selection-start-line="276" selection-start-column="41" selection-end-line="276" selection-end-column="41" />
+            <state relative-caret-position="695">
+              <caret line="308" lean-forward="true" selection-start-line="308" selection-end-line="308" />
               <folding>
                 <element signature="e#23#38#0" expanded="true" />
               </folding>
@@ -137,35 +100,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
-              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/django_web/controller/report_controller.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="51" column="29" lean-forward="true" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
-              <folding>
-                <element signature="e#22#79#0" expanded="true" />
-              </folding>
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django_web/controller/user_controller.py">
+        <entry file="file://$PROJECT_DIR$/django_web/controller/report_controller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-              <folding>
-                <element signature="e#24#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="38">
+              <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -174,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/django_web/controller/task_controller.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="183">
-              <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+              <caret line="33" column="41" lean-forward="true" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
               <folding>
                 <element signature="e#23#58#0" expanded="true" />
               </folding>
@@ -235,7 +183,6 @@
         <option value="$PROJECT_DIR$/django_web/controller/sql_scan_controller.py" />
         <option value="$PROJECT_DIR$/django_web/const/task_state.py" />
         <option value="$PROJECT_DIR$/django_web/controller/report_service.py" />
-        <option value="$PROJECT_DIR$/django_web/service/collaborative_filtering_service.py" />
         <option value="$PROJECT_DIR$/static/css/report.css" />
         <option value="$PROJECT_DIR$/static/js/report.js" />
         <option value="$PROJECT_DIR$/templates/paper" />
@@ -260,10 +207,11 @@
         <option value="$PROJECT_DIR$/django_web/views.py" />
         <option value="$PROJECT_DIR$/templates/report.html" />
         <option value="$PROJECT_DIR$/django_web/controller/task_controller.py" />
-        <option value="$PROJECT_DIR$/demo/settings.py" />
         <option value="$PROJECT_DIR$/django_web/service/apriori_service.py" />
-        <option value="$PROJECT_DIR$/django_web/service/task_service.py" />
         <option value="$PROJECT_DIR$/django_web/controller/report_controller.py" />
+        <option value="$PROJECT_DIR$/django_web/service/task_service.py" />
+        <option value="$PROJECT_DIR$/django_web/service/collaborative_filtering_service.py" />
+        <option value="$PROJECT_DIR$/demo/settings.py" />
       </list>
     </option>
   </component>
@@ -348,7 +296,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -565,12 +513,12 @@
       <workItem from="1555170630788" duration="2781000" />
       <workItem from="1555223697109" duration="20646000" />
       <workItem from="1555292251777" duration="17845000" />
-      <workItem from="1555317856404" duration="3292000" />
+      <workItem from="1555317856404" duration="7681000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253508000" />
+    <option name="totallyTimeSpent" value="257897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
@@ -581,8 +529,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4987874" visible="true" weight="0.2371476" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4987874" weight="0.35986733" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4987874" visible="true" weight="0.2769486" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4987874" weight="0.35820895" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -590,7 +538,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3283582" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012126" side_tool="true" weight="0.39966834" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4987874" weight="0.3692053" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4987874" weight="0.3681592" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3283582" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -611,9 +559,9 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/django_web/service/apriori_service.py</url>
-          <line>290</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/django_web/service/task_service.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -901,16 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_web/service/collaborative_filtering_service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
-          <folding>
-            <element signature="e#15#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -932,16 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_web/controller/user_controller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <element signature="e#24#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_web/service/file_service.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3952">
@@ -952,27 +880,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_web/service/apriori_service.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-326">
-          <caret line="276" column="41" selection-start-line="276" selection-start-column="41" selection-end-line="276" selection-end-column="41" />
+        <state relative-caret-position="695">
+          <caret line="308" lean-forward="true" selection-start-line="308" selection-end-line="308" />
           <folding>
             <element signature="e#23#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/django_web/controller/user_controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_web/controller/report_controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/django_web/controller/task_controller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+          <caret line="33" column="41" lean-forward="true" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
           <folding>
             <element signature="e#23#58#0" expanded="true" />
           </folding>
@@ -981,21 +919,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django_web/service/task_service.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="64" column="23" lean-forward="true" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
+        <state relative-caret-position="117">
+          <caret line="55" column="53" lean-forward="true" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
           <folding>
             <element signature="e#23#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_web/controller/report_controller.py">
+    <entry file="file://$PROJECT_DIR$/django_web/service/collaborative_filtering_service.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="51" column="29" lean-forward="true" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+        <state relative-caret-position="342">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
           <folding>
-            <element signature="e#22#79#0" expanded="true" />
+            <element signature="e#15#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
         </state>
       </provider>
     </entry>
