@@ -26,8 +26,12 @@ def save_error(task_id, mistake_type, mistake_grade, mistake_detail, find_time, 
                                   mistake_detail=mistake_detail, find_time=find_time, method=method, extends=extends)
 
 
-def get_error(task_id):
-    return models.mistake.objects.filter(task_id=task_id).values()
+def get_table_error(task_id):
+    return models.mistake.objects.filter(task_id=task_id, mistake_type='数据库表错误').values()
+
+
+def get_attribute_error(task_id):
+    return models.mistake.objects.filter(task_id=task_id, mistake_type='关键属性错误').values()
 
 
 def task_success(task_id):
@@ -38,7 +42,7 @@ def task_fail(task_id):
     models.task.objects.filter(id=task_id).update(state=1)
 
 
-def start_task(task_id):
+def start_task(task_id, table_attribute_dict):
     res = {}
     try:
         # 获取指定的task
@@ -53,8 +57,11 @@ def start_task(task_id):
         # 保存错误到数据库中
         collaborative_filtering_service.save_errors(task_id, errors)
         # 获取置信度关系
-        confidences = apriori_service.get_rules()
-
+        for i in table_attribute_dict:
+            # 关联规则挖掘
+            data = apriori_service.task_apriori_check(temp_task['file_name'], i, table_attribute_dict[i])
+            # 保存错误到数据库中
+            apriori_service.save_apriori_mistake(task_id, data)
         res['code'] = 0
         res['message'] = '任务执行成功'
     except Exception as e:
@@ -64,14 +71,6 @@ def start_task(task_id):
     return res
 
 
-def test(table_name, attribute_name):
-    confidences = apriori_service.get_rules(table_name, attribute_name)
-    for confidence in confidences:
-        rule_a = confidence['rule_a']
-        rule_b = confidence['rule_b']
-        rule_a = rule_a.split(',')
-        rule_b = rule_b.split(',')
-        confi_num = confidence['confidence']
-        print(rule_a)
-        print(rule_b)
-        print(confi_num)
+def test(table_name, attribute):
+    data = apriori_service.task_apriori_check(table_name, attribute)
+    apriori_service.save_apriori_mistake(1, data)

@@ -1,4 +1,5 @@
 # _*_ coding:utf-8 _*_
+import datetime
 
 from django_web.service import file_service
 from django_web import models
@@ -207,7 +208,7 @@ def start_apriori(table_name, attribute_name):
             list_rule_a.append(i)
         for i in frozen_rule_b:
             list_rule_b.append(i)
-        add_confidence_rule(table_name, attribute_name,list_rule_a, list_rule_b, confi_num)
+        add_confidence_rule(table_name, attribute_name, list_rule_a, list_rule_b, confi_num)
     return confidences
 
 
@@ -250,5 +251,58 @@ def get_rules(table_name, attribute_name):
     :return:
     """
     return models.confidence_rule.objects.filter(table_name=table_name, attribute_name=attribute_name).values()
+
+
 # start()
 
+def task_apriori_check(file_name, table_name, attribute_name):
+    """
+    使用【关联规则挖掘算法求出的置信度关系】分析上传文件指定表中指定属性
+    :param file_name:文件名
+    :param table_name:数据库表名
+    :param attribute_name:属性名
+    :return:可能存在的错误及置信度数组{a:[1,0.5...],b:[1,0.5...]...}
+    """
+    confidences = get_rules(table_name, attribute_name)
+    value_list = file_service.get_values_by_table_attribute_by_file(file_name,
+                                                                    table_name,
+                                                                    attribute_name)
+    # 读取置信度信息，并按照置信度从大到小进行排序
+    confidence_tuple_list = []
+    for confidence in confidences:
+        rule_a = confidence['rule_a']
+        rule_b = confidence['rule_b']
+        rule_a = set(rule_a.split(','))
+        rule_b = set(rule_b.split(','))
+        confi_num = confidence['confidence']
+        confidence_tuple_list.append((rule_a, rule_b, confi_num))
+    confidence_tuple_list.sort(key=lambda x: x[2], reverse=True)
+    res = {}
+    # 将list转成集合
+    value_list = set(value_list)
+    # 分析置信度规则
+    for i in confidence_tuple_list:
+        if i[0].issubset(value_list) and not i[1].issubset(value_list):
+            for item in i[1]:
+                if item not in res.keys():
+                    res[item] = []
+                res[item].append((i[0], i[2]))
+
+    data = {}
+    # 除去所有已在源文件中出现的值
+    for i in res:
+        if i not in value_list:
+            data[i] = res[i]
+    # print(data)
+    return data
+
+
+def save_apriori_mistake(task_id, data):
+    for i in data:
+        avg = 0
+        for confi in data[i]:
+            avg += confi[1]
+        avg /= len(data[i])
+        curr_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        models.mistake.objects.create(task_id=task_id, mistake_type='关键属性错误', mistake_grade='高危',
+                                      mistake_detail=str(data[i]), find_time=curr_time, method='', extends=avg)

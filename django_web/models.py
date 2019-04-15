@@ -26,7 +26,7 @@ class mistake(models.Model):
     task_id = models.IntegerField()
     mistake_type = models.CharField(max_length=100)
     mistake_grade = models.CharField(max_length=100)
-    mistake_detail = models.CharField(max_length=255)
+    mistake_detail = models.CharField(max_length=2048)
     find_time = models.CharField(max_length=100)
     method = models.CharField(max_length=255)
     extends = models.CharField(max_length=255)

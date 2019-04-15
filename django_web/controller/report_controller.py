@@ -9,9 +9,10 @@ from django_web.service import task_service
 @login_required(login_url='/')
 def get_report(request, task_id):
     data = {}
-    menu = ['编号', '出错表格', '提测用户', '检测文件', '错误类型', '预警等级', '检测时间', '其他']
+    menu = ['编号', '错误详情', '提测用户', '检测文件', '错误类型', '预警等级', '检测时间', '其他']
     # curr_user = user_service.get_user_by_id('1')[0]
-    errors = task_service.get_error(task_id)
+    table_errors = task_service.get_table_error(task_id)
+    attribute_errors = task_service.get_attribute_error(task_id)
     curr_task = task_service.get_task_by_task_id(task_id)[0]
     curr_task_name = curr_task['file_name'][21:]
     error_list = []
@@ -22,10 +23,24 @@ def get_report(request, task_id):
     info['last_time'] = '小于5分钟'
     data['menu'] = menu
     i = 1
-    for error in errors:
+    # 数据库表错误
+    for error in table_errors:
         tmp = {}
         tmp['id'] = i
-        tmp['table_name'] = error['mistake_detail']
+        tmp['mistake_detail'] = error['mistake_detail']
+        tmp['user_name'] = request.user
+        tmp['file_name'] = curr_task_name
+        tmp['mistake_type'] = error['mistake_type']
+        tmp['mistake_grade'] = error['mistake_grade']
+        tmp['time'] = error['find_time']
+        tmp['other'] = '无'
+        error_list.append(tmp)
+        i += 1
+    # 关键属性错误
+    for error in attribute_errors:
+        tmp = {}
+        tmp['id'] = i
+        tmp['mistake_detail'] = 'aaa' # error['mistake_detail']
         tmp['user_name'] = request.user
         tmp['file_name'] = curr_task_name
         tmp['mistake_type'] = error['mistake_type']
@@ -36,5 +51,4 @@ def get_report(request, task_id):
         i += 1
     data['list'] = error_list
     data['info'] = info
-
     return render(request, 'report.html', data)

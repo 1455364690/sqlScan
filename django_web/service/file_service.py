@@ -197,3 +197,17 @@ def get_values_by_table_and_attribute_key(table_name, attribute_key):
                 value_list.append(get_insert_sql_info_by_attribute(i, attribute_key))
         value_lists.append(value_list)
     return value_lists
+
+
+def get_values_by_table_attribute_by_file(file_name, table_name, attribute):
+    file_map = read_file(file_name, file_dir)
+    if file_map['code'] != 0:
+        return False
+    insert_list = get_all_insert_sql(file_map['data'])
+    value_list = []
+    for i in insert_list:
+        tmp_table_name = get_tables(i)[0]
+        if tmp_table_name != table_name:
+            continue
+        value_list.append(get_insert_sql_info_by_attribute(i, attribute))
+    return value_list
