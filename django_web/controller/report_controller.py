@@ -24,7 +24,10 @@ def get_report(request, task_id):
     data['menu'] = menu
     i = 1
     # 数据库表错误
+    table_errors_dict = {}
+    attribute_errors_dict = {}
     for error in table_errors:
+        table_errors_dict[error['mistake_grade']] = table_errors_dict.get(error['mistake_grade'], 0) + 1
         tmp = {}
         tmp['id'] = i
         tmp['mistake_detail'] = error['mistake_detail']
@@ -38,9 +41,10 @@ def get_report(request, task_id):
         i += 1
     # 关键属性错误
     for error in attribute_errors:
+        attribute_errors_dict[error['mistake_grade']] = attribute_errors_dict.get(error['mistake_grade'], 0) + 1
         tmp = {}
         tmp['id'] = i
-        tmp['mistake_detail'] = 'aaa' # error['mistake_detail']
+        tmp['mistake_detail'] = 'aaa'  # error['mistake_detail']
         tmp['user_name'] = request.user
         tmp['file_name'] = curr_task_name
         tmp['mistake_type'] = error['mistake_type']
@@ -49,6 +53,13 @@ def get_report(request, task_id):
         tmp['other'] = '无'
         error_list.append(tmp)
         i += 1
+    table_errors_graph = []
+    attribute_errors_graph = []
+    for i in table_errors_dict:
+        table_errors_graph.append({'value': table_errors_dict[i], 'name': i})
+    for i in attribute_errors_dict:
+        attribute_errors_graph.append({'value': attribute_errors_dict[i], 'name': i})
     data['list'] = error_list
     data['info'] = info
+    data['graph_data'] = {'table': table_errors_graph, 'attribute': attribute_errors_graph}
     return render(request, 'report.html', data)

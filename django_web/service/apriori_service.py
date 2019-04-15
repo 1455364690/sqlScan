@@ -293,7 +293,6 @@ def task_apriori_check(file_name, table_name, attribute_name):
     for i in res:
         if i not in value_list:
             data[i] = res[i]
-    # print(data)
     return data
 
 
