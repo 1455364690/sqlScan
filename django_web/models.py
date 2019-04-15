@@ -34,6 +34,8 @@ class mistake(models.Model):
 
 class confidence_rule(models.Model):
     id = models.IntegerField(primary_key=True)
+    table_name = models.CharField(max_length=255)
+    attribute_name = models.CharField(max_length=255)
     rule_a = models.CharField(max_length=255)
     rule_b = models.CharField(max_length=255)
     confidence = models.FloatField()

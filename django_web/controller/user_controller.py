@@ -11,7 +11,7 @@ from django_web.service import user_service
 
 
 def user_login(request):
-    apriori_service.start()
+    # apriori_service.start_apriori('ucr_iupc.PM_OFFER_REL', 'REL_OFFER_ID')
     if request.method == 'POST':
         body = json.loads(request.body)
         username = body.get('username')

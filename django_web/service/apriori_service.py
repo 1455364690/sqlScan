@@ -4,17 +4,17 @@ from django_web.service import file_service
 from django_web import models
 
 
-def get_dataset():
+def get_dataset(table_name, attribute_name):
     """
-    测试集
+    测试集'ucr_iupc.PM_OFFER_REL', 'REL_OFFER_ID'
     :return:
     """
     data = []
-    res = file_service.get_values_by_table_and_attribute_key('ucr_iupc.PM_OFFER_REL', 'REL_OFFER_ID')
+    res = file_service.get_values_by_table_and_attribute_key(table_name, attribute_name)
     # for i in res:
     #     data.append(i[0:9])
     # print(data)
-    print(res)
+    print('res:', res)
     return res
     # return [[1, 3, 4], [2, 3, 5], [1, 2, 3, 5], [2, 5], [1, 2, 3, 5], [1, 2, 3, 4, 5]]
 
@@ -185,12 +185,12 @@ def get_confidence(freq_sets, support_data, min_confidence=0.7):
     return confidence_list
 
 
-def start_apriori():
+def start_apriori(table_name, attribute_name):
     """
     Apriori方法计算求置信度
     :return:
     """
-    data = get_dataset()
+    data = get_dataset(table_name, attribute_name)
     # 获取频繁项集和支持度集
     freq_sets, support_data = apriori(data, 0.5)
     # 计算置信度
@@ -207,7 +207,7 @@ def start_apriori():
             list_rule_a.append(i)
         for i in frozen_rule_b:
             list_rule_b.append(i)
-        add_confidence_rule(list_rule_a, list_rule_b, confi_num)
+        add_confidence_rule(table_name, attribute_name,list_rule_a, list_rule_b, confi_num)
     return confidences
 
 
@@ -224,7 +224,7 @@ def clear_confidence_rule():
         return False
 
 
-def add_confidence_rule(list_rule_a, list_rule_b, confi_num):
+def add_confidence_rule(table_name, attribute_name, list_rule_a, list_rule_b, confi_num):
     """
     将置信度关系保存到数据库中
     :param list_rule_a:
@@ -232,13 +232,23 @@ def add_confidence_rule(list_rule_a, list_rule_b, confi_num):
     :param confi_num:
     :return:
     """
-    models.confidence_rule.objects.create(rule_a=list_rule_a, rule_b=list_rule_b, confidence=confi_num)
+    rule_a = ''
+    rule_b = ''
+    for i in list_rule_a:
+        rule_a += ',' + i
+    for i in list_rule_b:
+        rule_b += ',' + i
+    rule_a = rule_a[1:len(rule_a)]
+    rule_b = rule_b[1:len(rule_b)]
+    models.confidence_rule.objects.create(table_name=table_name, attribute_name=attribute_name, rule_a=rule_a,
+                                          rule_b=rule_b, confidence=confi_num)
 
 
-def get_rules():
+def get_rules(table_name, attribute_name):
     """
     从数据库中读取所有置信度关系
     :return:
     """
-    return models.confidence_rule.objects.all().values()
+    return models.confidence_rule.objects.filter(table_name=table_name, attribute_name=attribute_name).values()
 # start()
+

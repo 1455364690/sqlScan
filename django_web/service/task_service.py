@@ -4,6 +4,7 @@ from django_web import models
 from django_web.const.task_state import TaskState
 from django_web.service import file_service
 from django_web.service import collaborative_filtering_service
+from django_web.service import apriori_service
 
 
 def create_task(user_id, file_name):
@@ -51,6 +52,9 @@ def start_task(task_id):
         errors = collaborative_filtering_service.start(package)
         # 保存错误到数据库中
         collaborative_filtering_service.save_errors(task_id, errors)
+        # 获取置信度关系
+        confidences = apriori_service.get_rules()
+
         res['code'] = 0
         res['message'] = '任务执行成功'
     except Exception as e:
@@ -58,3 +62,16 @@ def start_task(task_id):
         res['message'] = '任务执行失败'
         res['detail'] = e
     return res
+
+
+def test(table_name, attribute_name):
+    confidences = apriori_service.get_rules(table_name, attribute_name)
+    for confidence in confidences:
+        rule_a = confidence['rule_a']
+        rule_b = confidence['rule_b']
+        rule_a = rule_a.split(',')
+        rule_b = rule_b.split(',')
+        confi_num = confidence['confidence']
+        print(rule_a)
+        print(rule_b)
+        print(confi_num)

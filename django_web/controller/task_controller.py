@@ -25,12 +25,13 @@ def start_task(request):
     if request.method == 'POST':
         body = json.loads(request.body)
         # task的id
-        task_id = body.get('id')
-        # 执行任务，进行检测
-        task_run_state = task_service.start_task(task_id)
-        # 修改任务状态
-        if task_run_state['code'] == 0:
-            task_service.task_success(task_id)
-        else:
-            task_service.task_fail(task_id)
-        return HttpResponse(json.dumps(task_run_state))
+        # task_id = body.get('id')
+        # # 执行任务，进行检测
+        # task_run_state = task_service.start_task(task_id)
+        # # 修改任务状态
+        # if task_run_state['code'] == 0:
+        #     task_service.task_success(task_id)
+        # else:
+        #     task_service.task_fail(task_id)
+        task_service.test('ucr_iupc.PM_OFFER_REL', 'REL_OFFER_ID')
+        return HttpResponse(json.dumps({}))
