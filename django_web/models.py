@@ -29,7 +29,7 @@ class mistake(models.Model):
     mistake_detail = models.CharField(max_length=2048)
     find_time = models.CharField(max_length=100)
     method = models.CharField(max_length=255)
-    extends = models.CharField(max_length=255)
+    extends = models.CharField(max_length=2048)
 
 
 class confidence_rule(models.Model):

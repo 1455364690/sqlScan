@@ -131,8 +131,8 @@
                 <tbody>
                 {% for line in list %}
                     <tr>
-                        <td>{{ line.id }}</td>
-                        <td><a>{{ line.mistake_detail }}</a></td>
+                        <td>{{ line.number }}</td>
+                        <td><a href="/reportDetail/{{ line.id }}">{{ line.mistake_detail }}</a></td>
                         <td>{{ line.user_name }}</td>
                         <td>{{ line.file_name }}</td>
                         <td>{{ line.mistake_type }}</td>

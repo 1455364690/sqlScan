@@ -40,4 +40,5 @@ urlpatterns = [
     path('upload/', file_controller.upload_file),
     path('startScan/', task_controller.start_task),
     re_path('^report/(\d+)/', report_controller.get_report),
+    re_path('^reportDetail/(\d+)/', report_controller.report_detail),
 ]

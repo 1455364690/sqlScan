@@ -61,7 +61,7 @@ def start_task(task_id, table_attribute_dict):
             # 关联规则挖掘
             data = apriori_service.task_apriori_check(temp_task['file_name'], i, table_attribute_dict[i])
             # 保存错误到数据库中
-            apriori_service.save_apriori_mistake(task_id, data)
+            apriori_service.save_apriori_mistake(task_id, data, i, table_attribute_dict[i])
         res['code'] = 0
         res['message'] = '任务执行成功'
     except Exception as e:

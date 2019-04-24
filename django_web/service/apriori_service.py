@@ -228,6 +228,8 @@ def clear_confidence_rule():
 def add_confidence_rule(table_name, attribute_name, list_rule_a, list_rule_b, confi_num):
     """
     将置信度关系保存到数据库中
+    :param table_name
+    :param attribute_name
     :param list_rule_a:
     :param list_rule_b:
     :param confi_num:
@@ -296,7 +298,7 @@ def task_apriori_check(file_name, table_name, attribute_name):
     return data
 
 
-def save_apriori_mistake(task_id, data):
+def save_apriori_mistake(task_id, data, table_name, attribute):
     for i in data:
         avg = 0
         for confi in data[i]:
@@ -304,4 +306,5 @@ def save_apriori_mistake(task_id, data):
         avg /= len(data[i])
         curr_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         models.mistake.objects.create(task_id=task_id, mistake_type='关键属性错误', mistake_grade='高危',
-                                      mistake_detail=str(data[i]), find_time=curr_time, method='', extends=avg)
+                                      mistake_detail=table_name + '.' + attribute, find_time=curr_time, method='',
+                                      extends=str(data[i]))
