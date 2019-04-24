@@ -21,10 +21,17 @@ def get_task_by_task_id(task_id):
     return models.task.objects.filter(id=task_id).values()
 
 
-def save_error(task_id, mistake_type, mistake_grade, mistake_detail, find_time, method, extends):
+def save_error(task_id, mistake_type, mistake_grade, mistake_detail, find_time, method, extends, similar_files,
+               files_has_table):
+    new_similar_files = ''
+    new_files_has_table = ''
+    for i in similar_files:
+        new_similar_files += ','+i
+    for i in files_has_table:
+        new_files_has_table += ','+i
     models.mistake.objects.create(task_id=task_id, mistake_type=mistake_type, mistake_grade=mistake_grade,
                                   mistake_detail=mistake_detail, find_time=find_time, method=method, extends=extends,
-                                  similar_files='1', error_lines='2')
+                                  similar_files=new_similar_files[1:], error_lines=new_files_has_table[1:])
 
 
 def get_table_error(task_id):

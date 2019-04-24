@@ -17,9 +17,13 @@ def get_similarity(new_tables, old_tables):
     return 1 / float(distance)
 
 
-def get_error_tables(new_tables, tables_times):
+def get_error_tables(new_tables, tables_times, similar_tables_list):
     res = []
     tables_in_his = {}
+    # 相似度最高的10个文件
+    files = []
+    for i in similar_tables_list:
+        files.append(i[0])
     for i in tables_times:
         if i not in new_tables:
             tables_in_his[i] = tables_times[i]
@@ -27,7 +31,12 @@ def get_error_tables(new_tables, tables_times):
         if i not in tables_times.keys():
             tables_in_his[i] = 0
     for i in tables_in_his:
-        data = {'sim': tables_in_his[i], 'table_name': i}
+        # 含有该表的文件
+        files_has_table = []
+        for temp in similar_tables_list:
+            if i in temp[1]:
+                files_has_table.append(temp[0])
+        data = {'sim': tables_in_his[i], 'table_name': i, 'files': files, 'files_has_table': files_has_table}
         if tables_in_his[i] >= 9:
             data['message'] = '高危'
         elif tables_in_his[i] >= 6:
@@ -54,7 +63,7 @@ def get_table_list(history, similar_table_key):
     for i in history:
         table_dict[i['name']] = i['tables']
     for i in similar_table_key:
-        res.append(table_dict.get(i[0]))
+        res.append((i[0], table_dict.get(i[0])))
     return res
 
 
@@ -66,7 +75,7 @@ def get_similar_tables_times(similar_tables_list):
     """
     tables_times = {}
     for tables in similar_tables_list:
-        for table in tables:
+        for table in tables[1]:
             tables_times[table] = tables_times.get(table, 0) + 1
     # print(tables_times)
     return tables_times
@@ -85,10 +94,14 @@ def start(package):
     sims.sort(key=lambda x: x[1], reverse=True)
     # 获取相似度最高的10个套餐的数据库表
     similar_tables_list = get_table_list(history, sims[:10])
+    # 记录相似度最高的十个文件名
+    # most_similar_10_files = []
+    # for i in sims[:10]:
+    #     most_similar_10_files.append(i[0])
     # 计算相似度最高的十个套餐中未在新套餐中出现的表出现的次数
     table_times = get_similar_tables_times(similar_tables_list)
     # 计算结果
-    errors = get_error_tables(package['tables'], table_times)
+    errors = get_error_tables(package['tables'], table_times, similar_tables_list)
     return errors
 
 
@@ -97,7 +110,7 @@ def save_errors(task_id, errors):
     for i in errors:
         curr_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         task_service.save_error(tmp_task['id'], '数据库表错误', i['message'], i['table_name'], curr_time, '请及时解决',
-                                i['sim'])
+                                i['sim'], i['files'], i['files_has_table'])
     return 0
 # {'sim': 10, 'table_name': 'ucr_iupc.PM_OFFER_REL', 'message': '高危'}
 # Recommendations = recommend('1')
