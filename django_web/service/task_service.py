@@ -23,7 +23,8 @@ def get_task_by_task_id(task_id):
 
 def save_error(task_id, mistake_type, mistake_grade, mistake_detail, find_time, method, extends):
     models.mistake.objects.create(task_id=task_id, mistake_type=mistake_type, mistake_grade=mistake_grade,
-                                  mistake_detail=mistake_detail, find_time=find_time, method=method, extends=extends)
+                                  mistake_detail=mistake_detail, find_time=find_time, method=method, extends=extends,
+                                  similar_files='1', error_lines='2')
 
 
 def get_table_error(task_id):

@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 
@@ -30,6 +31,8 @@ class mistake(models.Model):
     find_time = models.CharField(max_length=100)
     method = models.CharField(max_length=255)
     extends = models.CharField(max_length=2048)
+    similar_files = models.CharField(max_length=2048, default='[]')
+    error_lines = models.CharField(max_length=2048, default='[]')
 
 
 class confidence_rule(models.Model):

@@ -93,10 +93,10 @@ def start(package):
 
 
 def save_errors(task_id, errors):
-    tmp_task = task_service.get_task_by_task_id(task_id)
+    tmp_task = task_service.get_task_by_task_id(task_id)[0]
     for i in errors:
         curr_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        task_service.save_error(tmp_task[0]['id'], '数据库表错误', i['message'], i['table_name'], curr_time, '请及时解决',
+        task_service.save_error(tmp_task['id'], '数据库表错误', i['message'], i['table_name'], curr_time, '请及时解决',
                                 i['sim'])
     return 0
 # {'sim': 10, 'table_name': 'ucr_iupc.PM_OFFER_REL', 'message': '高危'}
