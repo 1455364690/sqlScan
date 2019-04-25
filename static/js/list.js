@@ -17,3 +17,7 @@ function report(id) {
     window.location.href="../report/"+id;
     console.log("查看报告"+id)
 }
+
+function test(task_id) {
+    window.open("../fileDetail/"+task_id)
+}

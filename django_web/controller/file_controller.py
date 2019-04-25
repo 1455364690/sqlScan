@@ -4,6 +4,8 @@ import json
 
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from django.shortcuts import render
+
 from django_web.service import user_service
 from django_web.service import file_service, task_service
 
@@ -25,3 +27,9 @@ def upload_file(request):
         data['code'] = 2
         data['message'] = '文件上传失败'
     return HttpResponse(json.dumps(data))
+
+@login_required(login_url='/')
+def read_file(request, task_id):
+    tmp_task = task_service.get_task_by_task_id(task_id)[0]
+    res = file_service.read_file(tmp_task['file_name'])
+    return render(request, 'file.html', res)

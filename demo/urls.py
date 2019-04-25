@@ -41,4 +41,5 @@ urlpatterns = [
     path('startScan/', task_controller.start_task),
     re_path('^report/(\d+)/', report_controller.get_report),
     re_path('^reportDetail/(\d+)/', report_controller.report_detail),
+    re_path('^fileDetail/(\d+)/', file_controller.read_file)
 ]

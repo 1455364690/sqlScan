@@ -61,7 +61,7 @@ def read_file(file_name, file_path=file_dir):
             data['code'] = 0
             data['message'] = '文件' + file_name + '读取成功'
             data['data'] = tmp_str
-        except Exception as  e:
+        except Exception as e:
             data['code'] = 1
             data['message'] = '文件' + file_name + '读取失败'
             data['detail'] = e

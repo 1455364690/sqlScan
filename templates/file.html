@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>检测列表</title>
+    <title>文件内容</title>
 </head>
 <body>
 <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.css"/>
@@ -30,7 +30,7 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="../test/"><span class="glyphicon glyphicon-home"></span>&nbsp;主页</a></li>
-                <li class="active"><a href=""><span
+                <li class="active"><a href="../../list/"><span
                         class="glyphicon glyphicon-align-justify"></span>&nbsp;检测列表</a></li>
 
             </ul>
@@ -40,60 +40,15 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-
-{#{% if menu %}#}
-{#    <ul>#}
-{#        {% for line in menu %}#}
-{#            <li>{{ line }}</li>#}
-{#            <li>{{ line.value }}</li>#}
-{#        {% endfor %}#}
-{#    </ul>#}
-{#{% endif %}#}
-
-
-<div class="container theme-showcase" role="main">
-    <table class="table table-striped" style="text-align: center">
-        <caption>SQL检测列表</caption>
-        <thead>
-        <tr>
-            {% for i in menu %}
-                <td>{{ i }}</td>
-            {% endfor %}
-        </tr>
-        </thead>
-        <tbody>
-        {% for line in task_list %}
-            <tr>
-                <td>{{ line.id }}</td>
-                <td><a onclick="test({{ line.id }})">{{ line.file_name }}</a></td>
-                <td>{{ line.create_time }}</td>
-                <td>
-                    {% ifequal line.state -1 %}
-                        测试
-                    {% else %}
-                        {% ifequal line.state 0 %}
-                            未测试
-                            {% else %}
-                            测试成功
-                        {% endifequal %}
-                    {% endifequal %}
-
-                </td>
-                <td>
-                    {% ifequal line.state -1 %}
-                        <button type="button" class="btn btn-sm btn-warning" onclick="restart({{ line.id }})">重新测试</button>
-                    {% else %}
-                        {% ifequal line.state 0 %}
-                            <button type="button" class="btn btn-sm btn-success" onclick="start({{ line.id }})">开始测试</button>
-                            {% else %}
-                            <button type="button" class="btn btn-sm btn-info" onclick="report({{ line.id }})">查看报告</button>
-                        {% endifequal %}
-                    {% endifequal %}
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<div class="container my-4">
+    <div class="panel panel-info">
+        <div class="panel-heading my-panel">
+            <h3 class="panel-title">文件内容</h3>
+        </div>
+        <div class="panel-body">
+            {{ data|linebreaks }}
+        </div>
+    </div>
 </div>
 </body>
 <script type="application/javascript" src="/static/js/util.js"></script>
