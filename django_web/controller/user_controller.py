@@ -47,6 +47,8 @@ def admin_user(request):
     users = []
     menu = ['编号', '用户id', '用户名', '用户注册时间', '用户状态', '操作']
     k = 0
+    act_user = 0
+    fre_user = 0
     for i in common_users:
         k += 1
         tmp = {}
@@ -56,7 +58,12 @@ def admin_user(request):
         tmp['create_time'] = i['create_time']
         tmp['state'] = i['user_state']
         users.append(tmp)
-    data = {'users': users, 'menu': menu}
+        if i['user_state'] == 0:
+            fre_user += 1
+        elif i['user_state'] == 1:
+            act_user += 1
+        user_dig = [{'name': '已激活', 'value': act_user}, {'name': '已冻结', 'value': fre_user}]
+    data = {'users': users, 'menu': menu, 'user_dig': user_dig}
     return render(request, 'admin.html', data)
 
 
