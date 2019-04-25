@@ -36,11 +36,15 @@ def generator_collaborative_filtering_report(tmp_mistake):
 
 
 def generator_apriori_report(tmp_mistake):
+    """
+    生成关键属性错误报告详情
+    :param tmp_mistake:
+    :return:
+    """
     table_name = tmp_mistake['mistake_detail']
     mistake_name = table_name + '表中的' + tmp_mistake['similar_files'] + '属性值可能存在错误'
     mistake_grade = tmp_mistake['mistake_grade']
     mistake_type = '数据库表错误'
-
     method = ''
     if mistake_grade == '高危':
         method = '该错误为高危错误，极有可能导致创建错误套餐，套餐业务员应尽快检查该属性值是否错误，如有错误请尽快修改。'
@@ -69,8 +73,13 @@ def generator_apriori_report(tmp_mistake):
     for i in relate:
         mistake_detail_graph_value[int(float(relate[i][0:5]) * 10) - 1] += 1
         # print(float(relate[i][0:5]) * 10, int(float(relate[i][0:5]) * 10))
-    print(mistake_detail_graph_value)
-    mistake_detail = {'graph_key': mistake_detail_graph_key, 'graph_value': mistake_detail_graph_value}
+    rule_table = []
+    for i in relate:
+        temp = {'rule_a': i, 'rule_b': tmp_mistake['error_lines'], 'rule': relate[i][0: 5]}
+        rule_table.append(temp)
+    menu = ['已有元素', '缺少元素', '关联度']
+    mistake_detail = {'graph_key': mistake_detail_graph_key, 'graph_value': mistake_detail_graph_value, 'menu': menu,
+                      'table': rule_table}
     info = {'错误名称': mistake_name, '错误级别': mistake_grade, '错误类型': mistake_type, '错误描述': mistake_description,
             '详细信息': mistake_detail, '解决方案': method}
     return info

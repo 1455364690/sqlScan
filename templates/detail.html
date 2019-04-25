@@ -97,7 +97,29 @@
                                 {% endifequal %}
                             {% else %}
                                 {% ifequal key '详细信息' %}
-                                    <div id="aaaa" style="height: 300px;width: 100%;"></div>
+                                    <div id="bar-graph" style="height: 300px;width: 100%;"></div>
+                                    <div style="width: 80%;margin-left: 10%">
+                                        <table class="table table-striped" style="text-align: center">
+                                            <caption>关联度列表</caption>
+                                            <thead>
+                                            <tr>
+                                                {% for i in info.详细信息.menu %}
+                                                    <td>{{ i }}</td>
+                                                {% endfor %}
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for line in info.详细信息.table %}
+                                                <tr>
+                                                    <td>{{ line.rule_a }}</td>
+                                                    <td>{{ line.rule_b }}</td>
+                                                    <td>{{ line.rule }}</td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+
                                 {% else %}
                                     {{ value | linebreaksbr }}
                                 {% endifequal %}

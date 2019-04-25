@@ -1,8 +1,7 @@
-var myChart = echarts.init(document.getElementById('aaaa'));
+var myChart = echarts.init(document.getElementById('bar-graph'));
 
 function paintGraph(key, value) {
     option = {
-        color: ['#0a9'],
         tooltip: {
             trigger: 'axis',
             axisPointer: {            // 坐标轴指示器，坐标轴触发有效
@@ -34,6 +33,20 @@ function paintGraph(key, value) {
                 name: '关联次数',
                 type: 'bar',
                 barWidth: '60%',
+                itemStyle: {
+                    normal: {
+                        color: function (params) {
+                            // build a color map as your need.
+                            var colorList = [
+                                '#C1232B', '#B5C334', '#FCCE10', '#E87C25', '#27727B',
+                                '#FE8463', '#9BCA63', '#FAD860', '#F3A43B', '#60C0DD',
+                                '#D7504B', '#C6E579', '#F4E001', '#F0805A', '#26C0C0'
+                            ];
+                            return colorList[params.dataIndex]
+
+                        },
+                    },
+                },
                 data: value//[10, 52, 200, 334, 390, 330, 220]
             }
         ]
