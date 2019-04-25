@@ -299,12 +299,34 @@ def task_apriori_check(file_name, table_name, attribute_name):
 
 
 def save_apriori_mistake(task_id, data, table_name, attribute):
+    """
+    保存关键属性错误
+    :param task_id:
+    :param data:
+    :param table_name:
+    :param attribute:
+    :return:
+    """
     for i in data:
         avg = 0
+        num_up_8 = 0
         for confi in data[i]:
             avg += confi[1]
+            if confi[1] > 0.8:
+                num_up_8 += 1
         avg /= len(data[i])
+        mistake_grade = ''
+        if num_up_8 == 0:
+            mistake_grade = '普通'
+        elif num_up_8 <= 2:
+            mistake_grade = '低危'
+        elif num_up_8 <= 5:
+            mistake_grade = '中危'
+        else:
+            mistake_grade = '高危'
+        if avg >= 0.8:
+            mistake_grade = '高危'
         curr_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        models.mistake.objects.create(task_id=task_id, mistake_type='关键属性错误', mistake_grade='高危',
-                                      mistake_detail=table_name + '.' + attribute, find_time=curr_time, method='',
-                                      extends=str(data[i]))
+        models.mistake.objects.create(task_id=task_id, mistake_type='关键属性错误', mistake_grade=mistake_grade,
+                                      mistake_detail=table_name, find_time=curr_time, method=avg,
+                                      extends=str(data[i]), similar_files=attribute, error_lines=i)

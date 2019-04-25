@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>错误详情</title>
 </head>
-<body onload="graph({{ graph_data.table }}, {{ graph_data.attribute }})">
+<body onload="paintGraph({{ info.详细信息.graph_key }},{{ info.详细信息.graph_value }})">
 <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="/static/css/toastr.min.css"/>
 <link rel="stylesheet" type="text/css" href="/static/css/fileinput.css"/>
@@ -45,33 +45,68 @@
             <h3 class="panel-title">错误详情</h3>
         </div>
         <div class="panel-body">
-            {% for key,value in info.items %}
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <span class="label label-primary" style="font-size: 15px">{{ key }}</span>
-                    </div>
-                    <div class="panel-body">
-                        {% ifequal key '错误级别' %}
-                            {% ifequal value '高危' %}
-                                <span class="label label-danger">{{ value }}</span>
-                            {% else %}
-                                {% ifequal value '中危' %}
-                                    <span class="label label-warning">{{ value }}</span>
+            {% ifequal type 0 %}
+                {% for key,value in info.items %}
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="label label-primary" style="font-size: 15px">{{ key }}</span>
+                        </div>
+                        <div class="panel-body">
+                            {% ifequal key '错误级别' %}
+                                {% ifequal value '高危' %}
+                                    <span class="label label-danger">{{ value }}</span>
                                 {% else %}
-                                    {% ifequal value '低危' %}
-                                        <span class="label label-info">{{ value }}</span>
+                                    {% ifequal value '中危' %}
+                                        <span class="label label-warning">{{ value }}</span>
                                     {% else %}
-                                        <span class="label label-success">{{ value }}</span>
+                                        {% ifequal value '低危' %}
+                                            <span class="label label-info">{{ value }}</span>
+                                        {% else %}
+                                            <span class="label label-success">{{ value }}</span>
+                                        {% endifequal %}
                                     {% endifequal %}
                                 {% endifequal %}
+                            {% else %}
+                                {{ value | linebreaksbr }}
                             {% endifequal %}
-                        {% else %}
-                            {{ value | linebreaksbr}}
-                        {% endifequal %}
 
+                        </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            {% endifequal %}
+            {% ifequal type 1 %}
+                {% for key,value in info.items %}
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="label label-primary" style="font-size: 15px">{{ key }}</span>
+                        </div>
+                        <div class="panel-body">
+                            {% ifequal key '错误级别' %}
+                                {% ifequal value '高危' %}
+                                    <span class="label label-danger">{{ value }}</span>
+                                {% else %}
+                                    {% ifequal value '中危' %}
+                                        <span class="label label-warning">{{ value }}</span>
+                                    {% else %}
+                                        {% ifequal value '低危' %}
+                                            <span class="label label-info">{{ value }}</span>
+                                        {% else %}
+                                            <span class="label label-success">{{ value }}</span>
+                                        {% endifequal %}
+                                    {% endifequal %}
+                                {% endifequal %}
+                            {% else %}
+                                {% ifequal key '详细信息' %}
+                                    <div id="aaaa" style="height: 300px;width: 100%;"></div>
+                                {% else %}
+                                    {{ value | linebreaksbr }}
+                                {% endifequal %}
+                            {% endifequal %}
+
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endifequal %}
         </div>
     </div>
 </div>
@@ -79,6 +114,6 @@
 
 </body>
 <script type="application/javascript" src="/static/js/util.js"></script>
-<script type="application/javascript" src="/static/js/report.js"></script>
+<script type="application/javascript" src="/static/js/detail.js"></script>
 
 </html>

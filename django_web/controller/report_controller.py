@@ -78,8 +78,10 @@ def report_detail(request, mistake_id):
     if mis['mistake_type'] == '数据库表错误':
         info = report_service.generator_collaborative_filtering_report(mis)
         res['info'] = info
+        res['type'] = 0
     elif mis['mistake_type'] == '关键属性错误':
-        info = report_service.generator_apriori_report(mis, tmp_task)
+        info = report_service.generator_apriori_report(mis)
         res['info'] = info
+        res['type'] = 1
     # menu = ['错误名称', '错误级别', '错误类型', '错误描述', '详细信息', '解决方案']
     return render(request, 'detail.html', res)
